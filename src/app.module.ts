@@ -1,5 +1,6 @@
 import { forwardRef, Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
+import { AppController } from './app.controller';
 import { ContactsModule } from './contacts/contacts.module';
 
 @Module({
@@ -10,7 +11,7 @@ import { ContactsModule } from './contacts/contacts.module';
     }),
     forwardRef(() => ContactsModule),
   ],
-  controllers: [],
+  controllers: [AppController],
   providers: [],
 })
 export class AppModule {}
